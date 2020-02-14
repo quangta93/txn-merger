@@ -4,7 +4,7 @@
   "description": "A tool for merging splited transactions",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "yarn clean && parcel --port 3000 ./src/index.html",
+    "start": "parcel --port 3000 ./src/index.html",
     "clean": "rm -rf .cache dist",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'"
   },

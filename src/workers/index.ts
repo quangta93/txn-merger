@@ -5,6 +5,4 @@ export interface IBackgroundApi {
   process: IProcess;
 }
 
-expose({
-  process,
-});
+expose({ process });

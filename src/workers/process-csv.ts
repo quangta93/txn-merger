@@ -14,7 +14,7 @@ export interface IProcess {
 export const process: IProcess = async csv => {
   const lines: string[] = csv.split('\n');
 
-  if (lines?.length) {
+  if (!lines?.length) {
     return 0;
   }
 
@@ -27,12 +27,28 @@ export const process: IProcess = async csv => {
     const transaction: any = {};
 
     headers.forEach((key: string, index: number) => {
-      transaction[key] =
-        key === 'amount' ? Number(tokens[index]) : tokens[index];
+      switch (key) {
+        case 'amount': {
+          transaction[key] = Number(tokens[index]);
+          break;
+        }
+
+        case 'tags': {
+          transaction[key] = tokens[index].split(',').filter(tag => !!tag);
+          break;
+        }
+
+        default: {
+          transaction[key] = tokens[index].startsWith('"')
+            ? tokens[index].slice(1, -1)
+            : tokens[index];
+        }
+      }
     });
 
     transactions.push(transaction as ITransaction);
   });
 
+  console.log('TCL: transactions', transactions.slice(0, 5));
   return transactions.length;
 };
