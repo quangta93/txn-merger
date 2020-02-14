@@ -1,0 +1,38 @@
+{
+  "name": "txn-merger",
+  "version": "0.0.0",
+  "description": "A tool for merging splited transactions",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "parcel --port 3000 ./src/index.html",
+    "prettify": "prettier --write './src/**/*.{ts,tsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangta93/txn-merger.git"
+  },
+  "author": "Quang Tran <quangta93@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quangta93/txn-merger/issues"
+  },
+  "homepage": "https://github.com/quangta93/txn-merger#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "parcel": "^1.12.4",
+    "prettier": "^1.19.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-semistandard": "^8.0.1",
+    "tslint-react": "^4.2.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "comlink": "^4.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
