@@ -49,6 +49,5 @@ export const process: IProcess = async csv => {
     transactions.push(transaction as ITransaction);
   });
 
-  console.log('TCL: transactions', transactions.slice(0, 5));
   return transactions.length;
 };

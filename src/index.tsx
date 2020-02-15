@@ -4,7 +4,7 @@ import {
   BackgroundApiProvider,
   useBackgroundApi,
   BackgroundApi,
-} from './components/BackgroundApiProvider';
+} from './providers';
 import './index.css';
 
 const InputForm: FC = () => {
